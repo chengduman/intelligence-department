@@ -1,0 +1,43 @@
+# 情报任务
+name: 📰 情报任务/简报
+description: 情报监控、竞品追踪或专题深挖任务
+title: "[情报] "
+labels: ["情报任务"]
+assignees: []
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 情报类型
+      options:
+        - 竞品动态追踪
+        - 政策法规监测
+        - 行业要闻简报
+        - 专题深挖
+        - 紧急预警
+    validations:
+      required: true
+  - type: textarea
+    id: topic
+    attributes:
+      label: 监控目标/主题
+      placeholder: 需要关注的企业、产品、政策或事件
+    validations:
+      required: true
+  - type: dropdown
+    id: assign
+    attributes:
+      label: 指派给
+      options:
+        - 马俊伟（部长分配）
+        - 黄思远（情报分析师-竞品追踪）
+        - 罗文杰（情报分析师-政策法规）
+        - 白若溪（情报专员）
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options:
+        - 🔴 紧急（即时响应）
+        - 🟡 重要（24h内）
+        - 🟢 常规（按排期）
