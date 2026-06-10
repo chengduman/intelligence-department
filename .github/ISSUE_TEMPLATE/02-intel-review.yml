@@ -1,0 +1,29 @@
+# 信息完整性审核（三级审核）
+name: ✅ 信息完整性审核
+description: 调研报告的信息完整性/情报准确性复核（马俊伟部长）
+title: "[信息审核] "
+labels: ["信息审核"]
+assignees: []
+body:
+  - type: input
+    id: report-ref
+    attributes:
+      label: 关联报告
+      placeholder: 报告名称
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 审核清单
+      options:
+        - label: 信息覆盖全面，无重大遗漏
+        - label: 竞品信息准确完整
+        - label: 政策/法规引用无误
+        - label: 信息来源可信度已标注
+        - label: 无过时信息（数据时间戳明确）
+  - type: textarea
+    id: opinion
+    attributes:
+      label: 审核意见
+      placeholder: 补充/修正建议
